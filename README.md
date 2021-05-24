@@ -1,2 +1,2 @@
-# PROYECTO-FINAL
-En este repositorio se subira el proyecto final de logica de programacion
+# Proyecto-final
+En este repositorio haremos el proyecto final.
