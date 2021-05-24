@@ -167,7 +167,6 @@ public class Programa{
 
 					letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
 					System.out.println();
-					
 				}
 				
 				//Opcion Numero 2 del menu del usuario.
@@ -179,4 +178,23 @@ public class Programa{
 
 					System.out.println("\n									  Usted esta escuchando: "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION]+ ".");
 					System.out.println(" 									  Del autor : "+ info_canciones[seleccion_actual][ConsoleData.AUTOR_CANCION]+".");
+				}
+
+				//Opcion Numero 3 del menu del usario.
+				if(centinela == 3)
+				{
+					for(int i=0;i<info_canciones.length;i++)
+					{
+							System.out.println("                            						Cancion # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
+					}
+						System.out.print("\n                                    			Ingrese el indice de la cancion, entre 0 y "+(info_canciones.length-1)+":");
+						indice_cancion = ConsoleInput.getInt();
+						audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+						audio.reproducir();
+						imprimir("\n                                      					El autor de esta cancion es: "+ info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						System.out.println("\n                          						La letra de la cancion que usted ha escogido es esta: \n"); 
+
+					inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+					fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+					letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
 				}
