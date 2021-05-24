@@ -48,7 +48,7 @@ public class Programa{
 
 		System.out.println(str);
 	}
-//Clase que muestra la letra de las canciones y en la cual se le quita el punto y coma al archivo.
+	//Clase que muestra la letra de las canciones y en la cual se le quita el punto y coma al archivo.
 	public static StringBuilder obtenerLetraCancion(int inicio,int fin, String[]data)
 	{
 		StringBuilder str = new StringBuilder();
@@ -93,3 +93,33 @@ public class Programa{
 		}
 		return str;
 	}
+
+	//Clase de menu del usuario
+	public static void menu()
+		{
+			System.out.println("										──────▄▀▄─────▄▀▄");
+			System.out.println("										─▄▄──█░░░░░░░░░░░█──▄▄");	
+			System.out.println("										█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█");
+			System.out.println(" 				██████████████████████████████████████████████████████████████████████████████████████████████████████████████████	");						
+			System.out.println(" 				█░░▄▀░░██░░▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█	");									 
+			System.out.println(" 				█░░▄▀░░██░░▄▀░░░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░░░█░░▄▀░░░░░░░░░░█	");			 						 
+			System.out.println(" 				█░░▄▀░░██░░▄▀░░███░░▄▀░░██░░▄▀░░█░░▄▀░░████░░▄▀░░███░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░███░░▄▀░░█████████	");									 
+			System.out.println(" 				█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░░░▄▀░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█	");
+			System.out.println(" 				█░░▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░███░░▄▀▄▀▄▀▄▀▄▀░░█	");
+			System.out.println("				█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░▄▀░░░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█ ");
+			System.out.println(" 				█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░░░░░▄▀░░░░███░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░███░░▄▀░░░░░░░░░░█	");
+			System.out.println(" 				█░░▄▀░░██░░▄▀░░███░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░█████░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░███░░▄▀░░█████████	");
+			System.out.println(" 				█░░▄▀░░██░░▄▀░░░░█░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀░░░░░░█░░▄▀░░██░░▄▀░░█░░▄▀░░░░░░▄▀░░█░░▄▀░░██░░▄▀░░░░█░░▄▀░░░░░░░░░░█	");
+			System.out.println(" 				█░░▄▀░░██░░▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█	");
+			System.out.println(" 				█░░░░░░██░░░░░░░░█░░░░░░██░░░░░░█░░░░░░██░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░█░░░░░░░░░░░░░░█	");
+			System.out.println(" 				██████████████████████████████████████████████████████████████████████████████████████████████████████████████████	\n");
+			System.out.println("							-----------Bienvenidos al Karaoke, por favor seleccione una opcion-----------");
+			System.out.println("							|		1. Reproducir cancion aleatoriamente con letra		    | ");
+			System.out.println("                            				|        	2. Reproducir cancion aleatoriamente sin letra              | ");
+			System.out.println("							|		3. Reproducir una cancion con su letra.                     |");
+			System.out.println("                            				|        	4. Reproducir una cancion sin letra.                        |");
+			System.out.println("							|		5. Detener Canción.                                 	    |");
+			System.out.println("							|		6. Salir.                                           	    |");
+			System.out.println("                            				-----------------------------------------------------------------------------");
+			System.out.print("                              				KARAOKE:");
+		}
