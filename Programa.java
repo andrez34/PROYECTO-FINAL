@@ -169,3 +169,14 @@ public class Programa{
 					System.out.println();
 					
 				}
+				
+				//Opcion Numero 2 del menu del usuario.
+				if(centinela == 2)
+				{
+					seleccion_actual = RandomHelper.random(0,info_canciones.length-1);
+					audio.seleccionarCancion(info_canciones[seleccion_actual][ConsoleData.RUTA_CANCION]);
+					audio.reproducir();
+
+					System.out.println("\n									  Usted esta escuchando: "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION]+ ".");
+					System.out.println(" 									  Del autor : "+ info_canciones[seleccion_actual][ConsoleData.AUTOR_CANCION]+".");
+				}
