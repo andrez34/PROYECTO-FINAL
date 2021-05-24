@@ -198,3 +198,38 @@ public class Programa{
 					fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
 					letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
 				}
+				
+				//Opcion Numero 4 del menu del usuario.
+				if(centinela == 4)
+					{
+						for(int i=0;i<info_canciones.length;i++)
+					{
+						System.out.println("									Cancion # "+i+ " : "+info_canciones[i][ConsoleData.NOMBRE_CANCION]);
+					}
+						System.out.print("\n							Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1)+":");
+						indice_cancion = ConsoleInput.getInt();
+						audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+						audio.reproducir();
+						System.out.println("\n                                   			Usted esta escuchando: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
+						System.out.println("                                            		Del autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+					}
+
+				//Opcion Numero 5 del menu del usuario.
+				if(centinela == 5)
+				{
+					System.out.println("										Usted ha detenido la cancion.");
+					audio.detener();
+				}
+
+  			//Opcion de salida del usuario.
+			}while(centinela!=6);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Ocurrio un error en el programa : "+ e);
+		}
+		finally{
+			audio.detener();
+		}
+	}
+}
