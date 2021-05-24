@@ -48,3 +48,48 @@ public class Programa{
 
 		System.out.println(str);
 	}
+//Clase que muestra la letra de las canciones y en la cual se le quita el punto y coma al archivo.
+	public static StringBuilder obtenerLetraCancion(int inicio,int fin, String[]data)
+	{
+		StringBuilder str = new StringBuilder();
+		StringTokenizer temp;
+
+		for(int i = inicio; i<=fin; i++)
+		{
+			temp = new StringTokenizer(data[i],";");
+			int aleatorio = (int)(Math.random() * 9);
+
+                    switch(aleatorio){
+                        case 0: System.out.print("                                                                 	 ");
+                        break;
+                        case 1: System.out.print("                                                                 	 ");
+                        break;
+                        case 2: System.out.print("                                                                 	 ");
+                        break;
+                        case 3: System.out.print("                                                                 	 ");
+                        break;
+                        case 4: System.out.print("                                                                 	 ");
+                        break;
+                        case 5: System.out.print("                                                                 	 ");
+                        break;
+                        case 6: System.out.print("                                                                 	 ");
+                        break;
+                        case 7: System.out.print("                                                                 	 ");
+                        break;
+                        case 8: System.out.print("                                                                 	 ");
+                        break;
+                        case 9: System.out.print("                                                                 	 ");
+                        break;
+                    }
+			while(temp.hasMoreTokens())
+			{
+				System.out.print(temp.nextToken()+" ");
+			}
+			System.out.println();
+			try {
+				Thread.sleep(1500);
+			} catch (Exception e) {
+			}
+		}
+		return str;
+	}
