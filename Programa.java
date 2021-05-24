@@ -123,3 +123,49 @@ public class Programa{
 			System.out.println("                            				-----------------------------------------------------------------------------");
 			System.out.print("                              				KARAOKE:");
 		}
+
+	//Comienzo del programa.
+	public static void main(String[] args) {
+
+		//Declaracion de variables.
+		Audio audio = new Audio();
+		int seleccion_actual = 0;
+		int centinela = 0;	
+		int indice_cancion = 0;
+		int inicio_letra = 0, fin_letra = 0;
+		String [] canciones;
+		String [][] info_canciones;
+		StringBuilder letra_cancion;
+
+		canciones = ConsoleFile.readBigFile("recursos/letras.csv");
+		info_canciones = ConsoleData.dataList(canciones);
+
+		//Comienzo del programa y de las opciones del usuario.
+		try{
+			
+			do{
+
+				//Se imprime el menu cada vez que el usuario escoge una respuesta.
+				System.out.println();
+				menu();
+				centinela = ConsoleInput.getInt();
+
+
+				//Opcion Numero 1 del menu del usuario.
+				if(centinela == 1)
+				{
+					seleccion_actual = RandomHelper.random(0,info_canciones.length-1);
+					audio.seleccionarCancion(info_canciones[seleccion_actual][ConsoleData.RUTA_CANCION]);
+					audio.reproducir(); 
+					
+					System.out.println("\n									 Usted esta escuchando: "+info_canciones[seleccion_actual][ConsoleData.NOMBRE_CANCION]+ "."); 
+					System.out.println("\n                      							 Del autor : "+ info_canciones[seleccion_actual][ConsoleData.AUTOR_CANCION]+".");
+					System.out.println("\n									 Esta es la letra de la cancion :\n");
+		
+					inicio_letra = ConsoleInput.stringToInt(info_canciones[seleccion_actual][ConsoleData.INICIO_CANCION]);
+					fin_letra = ConsoleInput.stringToInt(info_canciones[seleccion_actual][ConsoleData.FIN_CANCION]);
+
+					letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+					System.out.println();
+					
+				}
